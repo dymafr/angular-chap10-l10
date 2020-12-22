@@ -7,17 +7,7 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { UsersComponent } from "./users/users.component";
 import { UserComponent } from "./user/user.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
-
-const APP_ROUTES: Routes = [
-  { path: "", component: HomepageComponent },
-  {
-    path: "users",
-    component: UsersComponent,
-    children: [{ path: ":id", component: UserComponent }]
-  },
-  // { path: "**", component: NotFoundComponent },
-  { path: "**", redirectTo: "" }
-];
+import { APP_ROUTES } from "./app.routes";
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES)],
